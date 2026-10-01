@@ -1,30 +1,39 @@
-# AI Chat with Sidebar
+# AI Interfaces Collection
 
-## What is this UI pattern?
-An AI chat interface where a user types messages to an AI assistant and gets replies in a conversation view. A sidebar lists past conversations and lets the user start a new chat.
+A collection of modern AI interface templates built with plain HTML, CSS and JavaScript.
 
-## Where is it commonly used?
-ChatGPT, Claude, Gemini, Microsoft Copilot, and customer support chat widgets.
+## Team
+- **Team name:** (write your team name here)
+- **Kushi** - Coordinator and UI Developer ([GitHub: kushibaira](https://github.com/kushibaira))
+- **Manoj** - Reviewer and UI Developer
+- **Dileep** - Tester and UI Developer
 
-## Why is it relevant to modern web interfaces?
-Conversational AI is now one of the most common ways people use software. A chat layout with saved history makes AI feel natural and easy to return to.
+## Selected UI topic
+AI Interfaces
 
-## Design and interaction patterns I observed
-- Collapsible sidebar with conversation history
-- Message bubbles that separate user and AI messages
-- Streaming (typing) text effect for AI replies
-- Prompt suggestion chips on an empty chat
-- Copy and regenerate buttons on AI replies
-- Sidebar turns into a slide-out menu on mobile
+## Topic research
+AI interfaces are screens where people talk to, search with, or get help from an AI system. They are now common in modern apps. Typical patterns include chat windows, command bars, and summary cards. They often use typing effects, suggestion chips, keyboard shortcuts, and quick actions such as copy or regenerate. Each UI in this collection has its own README with detailed research.
 
-## What my implementation does differently
-- Simulated AI replies, with no backend needed
-- Dark and light theme toggle
-- Fully responsive layout
-- Built with plain HTML, CSS and JavaScript
+## Implemented UIs
+| UI | Built by | Folder |
+|---|---|---|
+| AI Chat with Sidebar | Kushi | [ai-chat-sidebar](./ai-chat-sidebar) |
+| AI Command Bar | Coming soon | [ai-command-bar](./ai-command-bar) |
+| AI Summary Cards | Coming soon | [ai-summary-cards](./ai-summary-cards) |
 
-## Technologies
-HTML5, CSS3, JavaScript
+## Technologies used
+- HTML5
+- CSS3
+- JavaScript (no libraries)
+
+## Screenshots
+Screenshots will be added in the `screenshots` folder.
 
 ## How to run
-Open `index.html` in a browser.
+1. Clone the repository:
+   `git clone https://github.com/kushibaira/ai-interfaces-collection.git`
+2. Open the folder of any UI, for example `ai-chat-sidebar`.
+3. Open `index.html` in a browser (or use the Live Server extension in VS Code).
+
+## GitHub workflow used
+Fork, Clone, Branch, Develop, Commit, Push, Pull Request, Review, Merge. Work is done on separate branches, never directly on `main`.
