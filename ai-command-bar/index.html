@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Command Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background page -->
+  <main class="page">
+    <h1>AI Command Bar</h1>
+    <p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the command bar.</p>
+    <button class="open-btn" id="openBtn">Open command bar</button>
+    <button class="theme-btn" id="themeBtn">Toggle theme</button>
+    <p class="status" id="status"></p>
+  </main>
+
+  <!-- Command bar popup -->
+  <div class="overlay" id="overlay">
+    <div class="palette">
+      <input type="text" id="searchInput" placeholder="Type a command or ask AI..." autocomplete="off">
+
+      <ul class="results" id="results"></ul>
+
+      <div class="ai-answer" id="aiAnswer"></div>
+
+      <div class="palette-footer">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> to move</span>
+        <span><kbd>Enter</kbd> to select</span>
+        <span><kbd>Esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
