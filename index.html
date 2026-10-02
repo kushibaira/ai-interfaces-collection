@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Interfaces Collection</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #f5f6fa;
+      color: #1f2430;
+      padding: 40px 16px;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; }
+    h1 { font-size: 32px; margin-bottom: 8px; }
+    p.sub { color: #6b7280; margin-bottom: 32px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e3e5ea;
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    }
+    .card img { width: 100%; height: 170px; object-fit: cover; object-position: top; background: #eee; }
+    .card div { padding: 16px; }
+    .card h2 { font-size: 18px; margin-bottom: 6px; }
+    .card span { font-size: 14px; color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>AI Interfaces Collection</h1>
+    <p class="sub">Three modern AI interface templates built with HTML, CSS and JavaScript.</p>
+
+    <div class="grid">
+      <a class="card" href="ai-chat-sidebar/index.html">
+        <img src="screenshots/chat-sidebar.png" alt="AI Chat with Sidebar">
+        <div>
+          <h2>AI Chat with Sidebar</h2>
+          <span>Conversation history, streaming replies, dark mode.</span>
+        </div>
+      </a>
+
+      <a class="card" href="ai-command-bar/index.html">
+        <img src="screenshots/command-bar.png" alt="AI Command Bar">
+        <div>
+          <h2>AI Command Bar</h2>
+          <span>Ctrl+K search, keyboard navigation, Ask AI.</span>
+        </div>
+      </a>
+
+      <a class="card" href="ai-summary-cards/index.html">
+        <img src="screenshots/summary-cards.png" alt="AI Summary Cards">
+        <div>
+          <h2>AI Summary Cards</h2>
+          <span>Summaries, key points, copy and regenerate.</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
