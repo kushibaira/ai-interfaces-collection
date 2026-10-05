@@ -76,3 +76,62 @@ if (balanceEl) {
 
   renderHome();
 }
+
+// ---------- Recharge page ----------
+const payBtn = document.getElementById("payBtn");
+
+if (payBtn) {
+  const topBalance = document.getElementById("topBalance");
+  const numberInput = document.getElementById("number");
+  const payAmount = document.getElementById("payAmount");
+  const payMsg = document.getElementById("payMsg");
+  const typeBtns = document.querySelectorAll(".type-btn");
+  let payType = "Mobile recharge";
+
+  function showBalance() {
+    topBalance.textContent = "Balance: " + formatMoney(loadState().balance);
+  }
+
+  typeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      typeBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      payType = btn.dataset.type;
+    });
+  });
+
+  document.querySelectorAll(".amt-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      payAmount.value = chip.dataset.amt;
+    });
+  });
+
+  payBtn.addEventListener("click", () => {
+    const number = numberInput.value.trim();
+    const amount = parseInt(payAmount.value);
+    const state = loadState();
+
+    payMsg.className = "pay-msg bad";
+    if (number === "") {
+      payMsg.textContent = "Please enter a number or consumer ID.";
+      return;
+    }
+    if (!amount || amount <= 0) {
+      payMsg.textContent = "Please enter a valid amount.";
+      return;
+    }
+    if (amount > state.balance) {
+      payMsg.textContent = "Not enough balance. Add money on the Home page.";
+      return;
+    }
+
+    addTransaction(payType + " (" + number + ")", -amount);
+    payMsg.className = "pay-msg ok";
+    payMsg.textContent = "Payment of " + formatMoney(amount) + " successful!";
+    numberInput.value = "";
+    payAmount.value = "";
+    showBalance();
+  });
+
+  showBalance();
+}
