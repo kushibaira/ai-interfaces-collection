@@ -79,3 +79,39 @@ posts.forEach((post) => {
     }
   });
 });
+
+// ---------- Profile page ----------
+const followBtn = document.getElementById("followBtn");
+
+if (followBtn) {
+  const followers = document.getElementById("followers");
+  const profileName = document.getElementById("profileName");
+  const bigAvatar = document.getElementById("bigAvatar");
+
+  // Show the username used at login
+  const user = localStorage.getItem("igUser");
+  if (user) {
+    profileName.textContent = user;
+    bigAvatar.textContent = user.charAt(0).toUpperCase();
+  }
+
+  // Follow toggle
+  let following = false;
+  followBtn.addEventListener("click", () => {
+    following = !following;
+    followBtn.classList.toggle("following", following);
+    followBtn.textContent = following ? "Following" : "Follow";
+    followers.textContent = following ? "1,205" : "1,204";
+  });
+
+  // Posts / Saved tabs
+  document.querySelectorAll(".grid-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".grid-tab").forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      document.getElementById("view-grid").classList.add("hidden");
+      document.getElementById("view-saved").classList.add("hidden");
+      document.getElementById("view-" + tab.dataset.view).classList.remove("hidden");
+    });
+  });
+}

@@ -308,3 +308,132 @@ a {
   color: #262626;
   font-weight: 700;
 }
+
+/* ---------- Profile page ---------- */
+.profile-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 12px 90px;
+}
+
+.profile-head {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.big-ring {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+}
+
+.big-ring span {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.profile-meta {
+  flex: 1;
+  min-width: 220px;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.name-row h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.follow-btn {
+  background: #0095f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 20px;
+  font-weight: 700;
+}
+
+.follow-btn.following {
+  background: #efefef;
+  color: #262626;
+}
+
+.stats {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.bio {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.grid-tabs {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #dbdbdb;
+}
+
+.grid-tab {
+  background: transparent;
+  border: none;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8e8e8e;
+  border-top: 2px solid transparent;
+  margin-top: -1px;
+}
+
+.grid-tab.active {
+  color: #262626;
+  border-top-color: #262626;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.photo-grid.hidden {
+  display: none;
+}
+
+.tile {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.t1 { background: #f6d365; }
+.t2 { background: #84fab0; }
+.t3 { background: #a1c4fd; }
+.t4 { background: #fbc2eb; }
+.t5 { background: #fda085; }
+.t6 { background: #8fd3f4; }
