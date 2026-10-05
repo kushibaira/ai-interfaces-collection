@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram - Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="ig-top">
+    <h1 class="ig-logo">Instagram</h1>
+    <a href="login.html" class="logout">Log out</a>
+  </header>
+
+  <main class="profile-page">
+
+    <section class="profile-head">
+      <div class="big-ring"><span id="bigAvatar">K</span></div>
+      <div class="profile-meta">
+        <div class="name-row">
+          <h2 id="profileName">kushi</h2>
+          <button class="follow-btn" id="followBtn">Follow</button>
+        </div>
+        <div class="stats">
+          <span><strong>6</strong> posts</span>
+          <span><strong id="followers">1,204</strong> followers</span>
+          <span><strong>310</strong> following</span>
+        </div>
+        <p class="bio">Student at Sai University 🎓<br>Learning web development 💻</p>
+      </div>
+    </section>
+
+    <div class="grid-tabs">
+      <button class="grid-tab active" data-view="grid">▦ Posts</button>
+      <button class="grid-tab" data-view="saved">🔖 Saved</button>
+    </div>
+
+    <section class="photo-grid" id="view-grid">
+      <div class="tile t1">1</div>
+      <div class="tile t2">2</div>
+      <div class="tile t3">3</div>
+      <div class="tile t4">4</div>
+      <div class="tile t5">5</div>
+      <div class="tile t6">6</div>
+    </section>
+
+    <section class="photo-grid hidden" id="view-saved">
+      <div class="tile t3">A</div>
+      <div class="tile t5">B</div>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="feed.html">🏠<span>Home</span></a>
+    <a href="profile.html" class="active">👤<span>Profile</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
