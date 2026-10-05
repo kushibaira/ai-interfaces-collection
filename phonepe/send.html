@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhonePe - Send Money</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1 class="brand">PhonePe</h1>
+    <span class="hello" id="sendBalance"></span>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h3>Send money</h3>
+
+      <p class="field-label">Choose a contact</p>
+      <div class="contacts">
+        <button class="contact active" data-name="Arun">
+          <span class="c-avatar">A</span>Arun
+        </button>
+        <button class="contact" data-name="Priya">
+          <span class="c-avatar">P</span>Priya
+        </button>
+        <button class="contact" data-name="Ravi">
+          <span class="c-avatar">R</span>Ravi
+        </button>
+        <button class="contact" data-name="Meena">
+          <span class="c-avatar">M</span>Meena
+        </button>
+      </div>
+
+      <label class="field-label" for="sendAmount">Amount (₹)</label>
+      <input type="number" id="sendAmount" class="field" placeholder="Enter amount" min="1">
+
+      <label class="field-label" for="note">Note (optional)</label>
+      <input type="text" id="note" class="field" placeholder="Add a note">
+
+      <p class="send-msg" id="sendMsg"></p>
+      <button class="send-btn" id="sendBtn">Pay</button>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html">🏠<span>Home</span></a>
+    <a href="send.html" class="active">💸<span>Send</span></a>
+    <a href="history.html">🧾<span>History</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhonePe - History</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1 class="brand">PhonePe</h1>
+    <span class="hello" id="histBalance"></span>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h3>Payment history</h3>
+
+      <input type="text" id="searchBox" class="field" placeholder="Search by name...">
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="credit">Received</button>
+        <button class="filter-btn" data-filter="debit">Paid</button>
+      </div>
+
+      <div class="summary-row">
+        <div class="sum-box">
+          <small>Received</small>
+          <strong class="credit" id="totalIn">₹0</strong>
+        </div>
+        <div class="sum-box">
+          <small>Paid</small>
+          <strong class="debit" id="totalOut">₹0</strong>
+        </div>
+      </div>
+
+      <ul class="txn-list" id="fullList"></ul>
+      <p class="empty" id="emptyMsg"></p>
+
+      <button class="clear-btn" id="clearBtn">Reset demo data</button>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html">🏠<span>Home</span></a>
+    <a href="send.html">💸<span>Send</span></a>
+    <a href="history.html" class="active">🧾<span>History</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
