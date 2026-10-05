@@ -55,3 +55,55 @@ if (balanceEl) {
     recentList.appendChild(buildTxnRow(t));
   });
 }
+
+// ---------- Send page ----------
+const sendBtn = document.getElementById("sendBtn");
+
+if (sendBtn) {
+  const sendBalance = document.getElementById("sendBalance");
+  const sendAmount = document.getElementById("sendAmount");
+  const noteInput = document.getElementById("note");
+  const sendMsg = document.getElementById("sendMsg");
+  const contactBtns = document.querySelectorAll(".contact");
+  let selected = "Arun";
+
+  function showSendBalance() {
+    sendBalance.textContent = "Balance: " + formatMoney(loadState().balance);
+  }
+
+  contactBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      contactBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      selected = btn.dataset.name;
+    });
+  });
+
+  sendBtn.addEventListener("click", () => {
+    const amount = parseInt(sendAmount.value);
+    const note = noteInput.value.trim();
+    const state = loadState();
+
+    sendMsg.className = "send-msg bad";
+    if (!amount || amount <= 0) {
+      sendMsg.textContent = "Please enter a valid amount.";
+      return;
+    }
+    if (amount > state.balance) {
+      sendMsg.textContent = "Insufficient balance.";
+      return;
+    }
+
+    let title = "Paid to " + selected;
+    if (note !== "") title += " (" + note + ")";
+    addTransaction(title, -amount);
+
+    sendMsg.className = "send-msg ok";
+    sendMsg.textContent = formatMoney(amount) + " sent to " + selected + " successfully!";
+    sendAmount.value = "";
+    noteInput.value = "";
+    showSendBalance();
+  });
+
+  showSendBalance();
+}
