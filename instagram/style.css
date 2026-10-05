@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fafafa;
+  color: #262626;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Login page ---------- */
+.login-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.login-card,
+.signup-card {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+  max-width: 350px;
+}
+
+.login-card {
+  padding: 30px 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logo-text {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login-card input {
+  padding: 10px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #a8a8a8;
+}
+
+.error {
+  color: #ed4956;
+  font-size: 13px;
+  min-height: 16px;
+  text-align: center;
+}
+
+.login-btn {
+  background: #0095f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.login-btn:hover {
+  background: #1877f2;
+}
+
+.or {
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.forgot {
+  text-align: center;
+  font-size: 12px;
+  color: #00376b;
+}
+
+.signup-card {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-card a {
+  color: #0095f6;
+  font-weight: 700;
+}
