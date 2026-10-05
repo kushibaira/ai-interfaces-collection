@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhonePe - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1 class="brand">PhonePe</h1>
+    <span class="hello">Hi, Kushi 👋</span>
+  </header>
+
+  <main class="container">
+
+    <section class="bank-card">
+      <p>Bank balance</p>
+      <h2 id="balance">₹0</h2>
+      <small>Savings account ••••4321</small>
+    </section>
+
+    <section class="card">
+      <h3>Send money</h3>
+      <div class="actions">
+        <a href="send.html" class="action"><span>👤</span>To contact</a>
+        <a href="send.html" class="action"><span>📱</span>To mobile</a>
+        <a href="send.html" class="action"><span>🏦</span>To bank</a>
+        <a href="history.html" class="action"><span>🧾</span>History</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Recent payments</h3>
+      <ul class="txn-list" id="recentList"></ul>
+      <a href="history.html" class="see-all">See all</a>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html" class="active">🏠<span>Home</span></a>
+    <a href="send.html">💸<span>Send</span></a>
+    <a href="history.html">🧾<span>History</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
