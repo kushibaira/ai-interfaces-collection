@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MobiKwik - History</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1 class="brand">MobiKwik</h1>
+    <span class="hello" id="histBalance"></span>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h3>Transaction history</h3>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="credit">Money in</button>
+        <button class="filter-btn" data-filter="debit">Money out</button>
+      </div>
+
+      <div class="summary-row">
+        <div class="sum-box">
+          <small>Total in</small>
+          <strong class="credit" id="totalIn">₹0</strong>
+        </div>
+        <div class="sum-box">
+          <small>Total out</small>
+          <strong class="debit" id="totalOut">₹0</strong>
+        </div>
+      </div>
+
+      <ul class="txn-list" id="fullList"></ul>
+      <p class="empty" id="emptyMsg"></p>
+
+      <button class="clear-btn" id="clearBtn">Reset demo data</button>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html">🏠<span>Home</span></a>
+    <a href="recharge.html">📱<span>Recharge</span></a>
+    <a href="history.html" class="active">🧾<span>History</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

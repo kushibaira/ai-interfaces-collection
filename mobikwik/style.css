@@ -284,3 +284,66 @@ a {
 .pay-btn:hover {
   background: #1648b8;
 }
+
+/* ---------- History page ---------- */
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.filter-btn {
+  flex: 1;
+  background: #f2f4f9;
+  border: 1px solid #e0e4ee;
+  border-radius: 10px;
+  padding: 10px 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filter-btn.active {
+  background: #1a56db;
+  color: #fff;
+  border-color: #1a56db;
+}
+
+.summary-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sum-box {
+  flex: 1;
+  background: #f2f4f9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.sum-box small {
+  display: block;
+  color: #7b8497;
+  margin-bottom: 4px;
+}
+
+.sum-box strong {
+  font-size: 20px;
+}
+
+.empty {
+  text-align: center;
+  color: #7b8497;
+  padding: 10px 0;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 12px;
+  background: transparent;
+  color: #d93025;
+  border: 1px solid #d93025;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+}

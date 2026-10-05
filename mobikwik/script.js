@@ -135,3 +135,56 @@ if (payBtn) {
 
   showBalance();
 }
+
+// ---------- History page ----------
+const fullList = document.getElementById("fullList");
+
+if (fullList) {
+  const histBalance = document.getElementById("histBalance");
+  const totalIn = document.getElementById("totalIn");
+  const totalOut = document.getElementById("totalOut");
+  const emptyMsg = document.getElementById("emptyMsg");
+  const clearBtn = document.getElementById("clearBtn");
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  let currentFilter = "all";
+
+  function renderHistory() {
+    const state = loadState();
+    histBalance.textContent = "Balance: " + formatMoney(state.balance);
+
+    let totalCredit = 0;
+    let totalDebit = 0;
+    state.transactions.forEach((t) => {
+      if (t.amount >= 0) totalCredit += t.amount;
+      else totalDebit += Math.abs(t.amount);
+    });
+    totalIn.textContent = formatMoney(totalCredit);
+    totalOut.textContent = formatMoney(totalDebit);
+
+    const list = state.transactions.filter((t) => {
+      if (currentFilter === "credit") return t.amount >= 0;
+      if (currentFilter === "debit") return t.amount < 0;
+      return true;
+    });
+
+    fullList.innerHTML = "";
+    list.forEach((t) => fullList.appendChild(buildTxnRow(t)));
+    emptyMsg.textContent = list.length === 0 ? "No transactions found." : "";
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      renderHistory();
+    });
+  });
+
+  clearBtn.addEventListener("click", () => {
+    localStorage.removeItem(STORAGE_KEY);
+    renderHistory();
+  });
+
+  renderHistory();
+}
