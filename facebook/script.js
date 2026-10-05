@@ -98,3 +98,33 @@ if (postsEl) {
     input.value = "";
   });
 }
+
+// ---------- Profile page ----------
+const tabButtons = document.querySelectorAll(".tab");
+const followBtn = document.getElementById("followBtn");
+
+if (tabButtons.length > 0) {
+  // Switch tabs
+  tabButtons.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabButtons.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      document.querySelectorAll(".tab-content").forEach((c) => {
+        c.classList.add("hidden");
+      });
+      document.getElementById("tab-" + tab.dataset.tab).classList.remove("hidden");
+    });
+  });
+
+  // Add friend button
+  const friendCount = document.getElementById("friendCount");
+  let added = false;
+
+  followBtn.addEventListener("click", () => {
+    added = !added;
+    followBtn.classList.toggle("added", added);
+    followBtn.textContent = added ? "Friends ✓" : "Add friend";
+    friendCount.textContent = added ? "249 friends" : "248 friends";
+  });
+}

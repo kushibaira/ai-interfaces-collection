@@ -319,3 +319,131 @@ hr {
     display: none;
   }
 }
+
+/* ---------- Profile page ---------- */
+.profile-layout {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.profile-top {
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.cover {
+  height: 220px;
+  background: linear-gradient(135deg, #1877f2, #42b72a);
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 0 20px 16px;
+  flex-wrap: wrap;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #1877f2;
+  color: #fff;
+  border: 4px solid #fff;
+  margin-top: -60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.profile-text h2 {
+  font-size: 28px;
+}
+
+.profile-text p {
+  color: #65676b;
+}
+
+.friend-btn {
+  margin-left: auto;
+  background: #1877f2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.friend-btn.added {
+  background: #e4e6eb;
+  color: #1c1e21;
+}
+
+.tabs {
+  display: flex;
+  border-top: 1px solid #dadde1;
+  padding: 0 12px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 14px 18px;
+  color: #65676b;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  color: #1877f2;
+  border-bottom-color: #1877f2;
+}
+
+.tab-content h3 {
+  margin-bottom: 12px;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+.mini-post {
+  background: #f0f2f5;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.photo {
+  aspect-ratio: 1;
+  border-radius: 10px;
+}
+
+.p1 { background: #8ec5fc; }
+.p2 { background: #f6d365; }
+.p3 { background: #a1c4fd; }
+.p4 { background: #fbc2eb; }
+.p5 { background: #84fab0; }
+.p6 { background: #fda085; }
+
+@media (max-width: 600px) {
+  .cover {
+    height: 140px;
+  }
+  .friend-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}

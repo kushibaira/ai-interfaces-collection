@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MobiKwik - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1 class="brand">MobiKwik</h1>
+    <span class="hello">Hi, Kushi 👋</span>
+  </header>
+
+  <main class="container">
+
+    <section class="wallet-card">
+      <p>Wallet balance</p>
+      <h2 id="balance">₹0</h2>
+      <div class="add-row">
+        <input type="number" id="addAmount" placeholder="Enter amount" min="1">
+        <button id="addBtn">+ Add money</button>
+      </div>
+      <p class="msg" id="msg"></p>
+    </section>
+
+    <section class="card">
+      <h3>Quick actions</h3>
+      <div class="actions">
+        <a href="recharge.html" class="action"><span>📱</span>Mobile recharge</a>
+        <a href="recharge.html" class="action"><span>💡</span>Electricity</a>
+        <a href="recharge.html" class="action"><span>📺</span>DTH</a>
+        <a href="history.html" class="action"><span>🧾</span>History</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Recent transactions</h3>
+      <ul class="txn-list" id="recentList"></ul>
+      <a href="history.html" class="see-all">See all</a>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html" class="active">🏠<span>Home</span></a>
+    <a href="recharge.html">📱<span>Recharge</span></a>
+    <a href="history.html">🧾<span>History</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

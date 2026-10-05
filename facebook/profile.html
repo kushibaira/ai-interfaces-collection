@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook - Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top navigation -->
+  <nav class="navbar">
+    <h1 class="nav-logo">facebook</h1>
+    <input type="text" class="nav-search" placeholder="Search Facebook">
+    <div class="nav-links">
+      <a href="feed.html">Home</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="login.html">Log out</a>
+    </div>
+  </nav>
+
+  <main class="profile-layout">
+
+    <!-- Cover and profile picture -->
+    <section class="profile-top">
+      <div class="cover"></div>
+      <div class="profile-info">
+        <div class="profile-avatar">K</div>
+        <div class="profile-text">
+          <h2>Kushi</h2>
+          <p id="friendCount">248 friends</p>
+        </div>
+        <button class="friend-btn" id="followBtn">Add friend</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="posts">Posts</button>
+        <button class="tab" data-tab="about">About</button>
+        <button class="tab" data-tab="photos">Photos</button>
+      </div>
+    </section>
+
+    <!-- Tab content -->
+    <section class="card tab-content" id="tab-posts">
+      <h3>My posts</h3>
+      <p class="mini-post">Just started learning web development. 🚀</p>
+      <p class="mini-post">Built my first AI chat UI today!</p>
+    </section>
+
+    <section class="card tab-content hidden" id="tab-about">
+      <h3>About</h3>
+      <p class="mini-post">🎓 Student at Sai University</p>
+      <p class="mini-post">📍 Chennai, India</p>
+      <p class="mini-post">💻 Loves HTML, CSS and JavaScript</p>
+    </section>
+
+    <section class="card tab-content hidden" id="tab-photos">
+      <h3>Photos</h3>
+      <div class="photo-grid">
+        <div class="photo p1"></div>
+        <div class="photo p2"></div>
+        <div class="photo p3"></div>
+        <div class="photo p4"></div>
+        <div class="photo p5"></div>
+        <div class="photo p6"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
