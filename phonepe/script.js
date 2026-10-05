@@ -107,3 +107,60 @@ if (sendBtn) {
 
   showSendBalance();
 }
+
+// ---------- History page ----------
+const fullList = document.getElementById("fullList");
+
+if (fullList) {
+  const histBalance = document.getElementById("histBalance");
+  const totalIn = document.getElementById("totalIn");
+  const totalOut = document.getElementById("totalOut");
+  const emptyMsg = document.getElementById("emptyMsg");
+  const clearBtn = document.getElementById("clearBtn");
+  const searchBox = document.getElementById("searchBox");
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  let currentFilter = "all";
+
+  function renderHistory() {
+    const state = loadState();
+    histBalance.textContent = "Balance: " + formatMoney(state.balance);
+
+    let totalCredit = 0;
+    let totalDebit = 0;
+    state.transactions.forEach((t) => {
+      if (t.amount >= 0) totalCredit += t.amount;
+      else totalDebit += Math.abs(t.amount);
+    });
+    totalIn.textContent = formatMoney(totalCredit);
+    totalOut.textContent = formatMoney(totalDebit);
+
+    const query = searchBox.value.trim().toLowerCase();
+    const list = state.transactions.filter((t) => {
+      if (currentFilter === "credit" && t.amount < 0) return false;
+      if (currentFilter === "debit" && t.amount >= 0) return false;
+      return t.title.toLowerCase().includes(query);
+    });
+
+    fullList.innerHTML = "";
+    list.forEach((t) => fullList.appendChild(buildTxnRow(t)));
+    emptyMsg.textContent = list.length === 0 ? "No payments found." : "";
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      renderHistory();
+    });
+  });
+
+  searchBox.addEventListener("input", renderHistory);
+
+  clearBtn.addEventListener("click", () => {
+    localStorage.removeItem(STORAGE_KEY);
+    renderHistory();
+  });
+
+  renderHistory();
+}

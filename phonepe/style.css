@@ -253,3 +253,66 @@ a {
 .send-btn:hover {
   background: #4d1d82;
 }
+
+/* ---------- History page ---------- */
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 14px;
+}
+
+.filter-btn {
+  flex: 1;
+  background: #f4f1fb;
+  border: 1px solid #e0daf0;
+  border-radius: 10px;
+  padding: 10px 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filter-btn.active {
+  background: #5f259f;
+  color: #fff;
+  border-color: #5f259f;
+}
+
+.summary-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sum-box {
+  flex: 1;
+  background: #f4f1fb;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.sum-box small {
+  display: block;
+  color: #7d7791;
+  margin-bottom: 4px;
+}
+
+.sum-box strong {
+  font-size: 20px;
+}
+
+.empty {
+  text-align: center;
+  color: #7d7791;
+  padding: 10px 0;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 12px;
+  background: transparent;
+  color: #d93025;
+  border: 1px solid #d93025;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+}
