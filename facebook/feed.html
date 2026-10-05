@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook - News Feed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top navigation -->
+  <nav class="navbar">
+    <h1 class="nav-logo">facebook</h1>
+    <input type="text" class="nav-search" placeholder="Search Facebook">
+    <div class="nav-links">
+      <a href="feed.html" class="active">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="login.html">Log out</a>
+    </div>
+  </nav>
+
+  <main class="feed-layout">
+
+    <!-- Create post box -->
+    <section class="card create-post">
+      <textarea id="postInput" rows="2" placeholder="What's on your mind?"></textarea>
+      <button class="post-btn" id="postBtn">Post</button>
+    </section>
+
+    <!-- Posts appear here -->
+    <div id="posts">
+
+      <article class="card post">
+        <div class="post-head">
+          <div class="avatar">A</div>
+          <div>
+            <strong>Arun Kumar</strong>
+            <span class="time">2 hours ago</span>
+          </div>
+        </div>
+        <p>Finished my first web project today. Feeling proud!</p>
+        <div class="post-actions">
+          <button class="like-btn">👍 Like <span class="count">12</span></button>
+          <button class="comment-btn">💬 Comment</button>
+          <button>↗ Share</button>
+        </div>
+        <div class="comment-box"></div>
+      </article>
+
+      <article class="card post">
+        <div class="post-head">
+          <div class="avatar green">P</div>
+          <div>
+            <strong>Priya Sharma</strong>
+            <span class="time">5 hours ago</span>
+          </div>
+        </div>
+        <p>Coffee and coding on a rainy Sunday. ☕</p>
+        <div class="post-actions">
+          <button class="like-btn">👍 Like <span class="count">8</span></button>
+          <button class="comment-btn">💬 Comment</button>
+          <button>↗ Share</button>
+        </div>
+        <div class="comment-box"></div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
