@@ -1,37 +1,36 @@
-# AI Interfaces Collection
+# UI Template Collection
 
-A collection of modern AI interface templates built with plain HTML, CSS and JavaScript.
+Web UI templates built with plain HTML, CSS and JavaScript. No libraries.
 
 ## Team
-- **Team name:** (AIinterfaces project)
-- **Kushi** - Coordinator and UI Developer ([GitHub: kushibaira](https://github.com/kushibaira))
+- **Kushi** - UI Developer ([GitHub: kushibaira](https://github.com/kushibaira))
 
-## Selected UI topic
-AI Interfaces
-
-## Topic research
-AI interfaces are screens where people talk to, search with, or get help from an AI system. They are now common in modern apps. Typical patterns include chat windows, command bars, and summary cards. They often use typing effects, suggestion chips, keyboard shortcuts, and quick actions such as copy or regenerate. Each UI in this collection has its own README with detailed research.
-
-## Implemented UIs
-| UI | Built by | Folder |
+## Apps (3 pages each)
+| App | Pages | Folder |
 |---|---|---|
-| AI Chat with Sidebar | Kushi | [ai-chat-sidebar](./ai-chat-sidebar) |
-| AI Command Bar | Kushi | [ai-command-bar](./ai-command-bar) |
-| AI Summary Cards | Kushi | [ai-summary-cards](./ai-summary-cards) |
+| Facebook | Login, News feed, Profile | [facebook](./facebook) |
+| MobiKwik | Home, Recharge, History | [mobikwik](./mobikwik) |
+| PhonePe | Home, Send money, History | [phonepe](./phonepe) |
+| Instagram | Login, Feed, Profile | [instagram](./instagram) |
 
-## Technologies used
-- HTML5
-- CSS3
-- JavaScript (no libraries)
+## Extra: AI interfaces
+- [AI Chat with Sidebar](./ai-chat-sidebar)
+- [AI Command Bar](./ai-command-bar)
+- [AI Summary Cards](./ai-summary-cards)
 
-## Screenshots
-Screenshots will be added in the `screenshots` folder.
+## Features
+- Responsive layouts
+- Working interactions: login, likes, comments, follow, tabs
+- Wallet and payment demos that share data across pages using the browser's local storage
+- Original designs with text logos only
+
+## Technologies
+HTML5, CSS3, JavaScript
 
 ## How to run
-1. Clone the repository:
-   `git clone https://github.com/kushibaira/ai-interfaces-collection.git`
-2. Open the folder of any UI, for example `ai-chat-sidebar`.
-3. Open `index.html` in a browser (or use the Live Server extension in VS Code).
+1. Clone the repo: `git clone https://github.com/kushibaira/ai-interfaces-collection.git`
+2. Open the folder in VS Code.
+3. Right-click `index.html` and choose **Open with Live Server**.
 
-## GitHub workflow used
-Fork, Clone, Branch, Develop, Commit, Push, Pull Request, Review, Merge. Work is done on separate branches, never directly on `main`.
+## GitHub workflow
+Branch, commit, push, pull request, merge. Every app was built on its own branch and merged through a pull request.
